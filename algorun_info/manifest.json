@@ -1,0 +1,52 @@
+{
+   	"manifest_version": "2.0",
+	"algo_name": "SDDS", // the name of your algorithm
+	"algo_version": "1.0.0", // the versuib of your algorithm
+	"algo_summary": "Stochastic Discrete Dynamical Systems.", // a 1-line summary of your algorithm
+	"algo_description": "The SDDS module simulates the average trajectory for each variable out of numberofSimulations trajectories deterministically or stochastically.", // a few lines description of your algorithm (basic html accepted)
+	"algo_website": "http://algorun.org", // url where users can find more information about your algorithm and/or a link to a tutorial or manual to run the algorithm
+	"algo_keywords": ["stochastic systems","propensities"], // a list of keywords describing your algorithm
+	"published_paper": { // if you already have a published paper for your algorithm. leave blank if not.
+            "title": "Modeling stochasticity and variability in gene regulatory networks",
+            "url": "https://doi.org/10.1186/1687-4153-2012-5"
+    	},
+	"algo_authors": [ // a list of all the algorithm's authors
+		{
+			"name": "Seda Arat",
+			"email": "Seda.Arat@jax.org", // make sure you have a gravatar (http://gravatar.com)
+            "profile_picture": "", // if you don't have a gravatar, put a profile picture in algorun_info folder and refer to it here
+			"personal_website": "https://www.linkedin.com/in/seda-arat/", // leave "" if not available
+			"organization": "Pfizer", // leave "" if not available
+			"org_website": "https://www.pfizer.com" // leave "" if not available
+		},
+		{
+			"name": "David Murrugarra",
+			"email": "murrugarra@doe.com", // make sure you have a gravatar (http://gravatar.com)
+            "profile_picture": "", // if you don't have a gravatar, put a profile picture in algorun_info folder and refer to it here
+			"personal_website": "http://www.ms.uky.edu/~dmu228/UKY/Home.html", // leave "" if not available
+			"organization": "University of Kentucky", // leave "" if not available
+			"org_website": "https://math.as.uky.edu" // leave "" if not available
+		}
+	],
+	"algo_packager": { // the one who packaged the algorithm into AlgoRun container.
+            "name": "David Murrugarra",
+            "email": "murrugarra@uky.edu",
+            "personal_website": "http://www.ms.uky.edu/~dmu228/UKY/Home.html",
+            "profile_picture": "",
+            "organization": "University of Kentucky", 
+            "org_website": "https://math.as.uky.edu" 
+	},
+	// all "type" keys listed below expect a value to be one of MIME types: https://www.sitepoint.com/web-foundations/mime-types-complete-list/
+	"algo_exec": "perl SDDS.pl -i $model -o sampleOutput.json", // the command to start algorithm execution. Use "$" to mark an input to be passed to the command.
+	"algo_input": [ // list all input parameters and their types. Names must match the names in the command above.
+		{ "name": "model", "src": "file", "type": "text/plain", "accepted_format": "algorun/undefined" } // text or number passed immediately in the command-line
+	],
+	"algo_output": [ // list all output produced by your algorithm. "result_format" is used on the AlgoPiper wesbsite for input/output types listing
+		{ "name": "plot", "src": "plot_av.png", "type": "image/png", "format": "algorun/undefined" }, // output file named "output1.txt" is text
+		{ "name": "Output", "src": "sampleOutput.json", "type": "text/plain", "format": "algorun/undefined" } // output file named "output-visualization.png" should be displayed as image
+	],
+	"algo_parameters": { // list all the parameters available for your algorithm. These parameters will be available for use in your algorithm as environment variables,
+		"caching": "on" // the default caching scheme of your algorithms (on/off).
+	},
+	"algo_image": "" // Example: "ahosny/react". leave "" if you did not upload your algorithm to docker hub or if you do not know what docker hub is :).
+}

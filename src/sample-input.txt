@@ -1,0 +1,12 @@
+Model: SDDS_model
+Number of variables: 3
+Variables: x1 x2 x3
+Number of states: 2 2 2
+Activation propensities: 0.5 0.9 0.5
+Degradation propensities: 0.7 0.8 0.9
+Number of simulations: 50
+Number of time steps: 10
+Initial state: 1 0 1
+f1 = x1*x2
+f2 = x1+1
+f3 = x1+x2

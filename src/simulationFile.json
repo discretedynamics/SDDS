@@ -1,0 +1,26 @@
+{
+   "simulation":{
+      "initialState":[
+         "1",
+         "0",
+         "1"
+      ],
+      "numberofStates":"2",
+      "propensities":{
+         "x2":{
+            "degradation":"0.8",
+            "activation":"0.9"
+         },
+         "x1":{
+            "degradation":"0.7",
+            "activation":"0.5"
+         },
+         "x3":{
+            "degradation":"0.9",
+            "activation":"0.5"
+         }
+      },
+      "numberofTimeSteps":"10",
+      "numberofSimulations":"50"
+   }
+}
