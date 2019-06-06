@@ -3,8 +3,7 @@
 	"algo_name": "SDDS", 
 	"algo_version": "1.0.0", 
 	"algo_summary": "Stochastic Discrete Dynamical Systems.", 
-	"algo_description": "The SDDS module simulates the average trajectory for each variable out of numberofSimulations trajectories deterministically or stochastically.<br>
-The input is a discrete dynamical systems with functions as polynomials and propensity parameters as described in this paper: https://doi.org/10.1186/1687-4153-2012-5.", 
+	"algo_description": "The SDDS module simulates the average trajectory for each variable out of numberofSimulations trajectories deterministically or stochastically. <br> <br> The input is a discrete dynamical system with functions given as polynomials. It also requires propensity parameters (between 0 and 1) for each variable as described in this paper: https://doi.org/10.1186/1687-4153-2012-5.", 
 	"algo_website": "https://github.com/discretedynamics/SDDS",  
 	"algo_keywords": ["stochastic systems","propensities"],
 	"published_paper": {
